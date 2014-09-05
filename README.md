@@ -3,7 +3,7 @@
 You will need to [create a Box application](https://box.com/developers/services/edit/) if 
 you haven't already.
 
-**You will need to do the following!**
+**You'll need to do the following:**
 
 Part of the OAuth2 workflow involves an HTTPS redirect from Box's site to the 
 one you'll be running here. The URL of *this* demo site *must* be registered 

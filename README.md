@@ -12,22 +12,21 @@ order to prevent rogue redirects; it's part of the OAuth2 spec.)  However,
 Visual Studio doesn't enable SSL by default, so there are a few steps 
 required to make it all work.
 
-+ Enable SSL connections in your project
+*Enable SSL connections in your project*
 
 1.  In the Solution Explorer, left-click on this project to select it.
 2.  Press F4 to bring up the project's Properties.
-3.  Change 'SSL Enabled' from False to True.  The SSL URL field should be 
-    automatically populated.
+3.  Change 'SSL Enabled' from False to True.  The SSL URL field should be automatically populated.
 4.  Copy the SSL URL to the clipboard.
 
-+ Configure your project to start with the SSL URL
+*Configure your project to start with the SSL URL*
 
 5.  Now right-click on the project name and select 'Properties'
 6.  Click the 'Web' tab
 7.  In the 'Servers' section find the text box labeled 'Project Url'
 8.  Paste the SSL URL into this text box and save the changes.
 
-+ Configure your Box application to redirect to the SSL URL
+*Configure your Box application to redirect to the SSL URL*
 
 9.  Browse to http://developers.box.com
 10.  Click on "My Box Apps" on the upper right; log in.1

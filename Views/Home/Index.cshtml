@@ -1,0 +1,47 @@
+﻿@model BoxApi.V2.Samples.WebAuthentication.MVC.Models.AuthModel
+
+@{
+    ViewBag.Title = "Authorization Flow";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Box Authorization Flow</h2>
+
+<p>This page demonstrates how to get an Authorization/Refresh Token pair for a user using your application's Client ID and Client Secret. These can found on the <em>Edit a Box Application</em> page for your app.</p>
+
+<p>If you are new to OAuth2 or Box, please consider reviewing Box's <a href="http://developers.box.com/oauth/">authentication primer</a>.</p>
+
+<p>
+    The first step is to enter your Client ID and Client Secret.  You will then be redirected to Box, where you will enter your credentials.
+    You will then be redirected back to this site with an authorization code. This will be exchanged for an authorization/refresh token pair and presented to you.
+</p>
+
+<div style="margin: 2em 0;">
+    @using (Html.BeginForm("Authorize", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        <fieldset>
+            <div class="form-group">
+                @Html.LabelFor(info => info.ClientId, "Client ID", new { @class = "control-label col-md-2 required" })
+                <div class="col-md-4">@Html.TextBoxFor(info => info.ClientId, new { @class = "form-control" })</div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(info => info.ClientSecret, "Client Secret", new { @class = "control-label col-md-2 required" })
+                <div class="col-md-4">@Html.TextBoxFor(info => info.ClientSecret, new { @class = "form-control" })</div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(info => info.AuthToken, "Authorization Token", new { @class = "control-label col-md-2" })
+                <div class="col-md-7">@Html.TextBoxFor(info => info.AuthToken, new { @class = "form-control", @readonly = "readonly" })</div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(info => info.RefreshToken, "Refresh Token", new { @class = "control-label col-md-2" })
+                <div class="col-md-7">@Html.TextBoxFor(info => info.RefreshToken, new { @class = "form-control", @readonly = "readonly" })</div>
+            </div>
+        </fieldset>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-3">
+                <input type="submit" class="btn btn-primary" value="Authorize" />
+                @Html.ActionLink("Reset", "Index", "Home", null, new{style="margin-left:1em;"})
+            </div>
+        </div>
+    }
+</div>

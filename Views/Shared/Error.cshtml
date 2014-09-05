@@ -1,0 +1,13 @@
+﻿@model BoxApi.V2.Samples.WebAuthentication.MVC.Models.ErrorModel
+
+@{
+    ViewBag.Title = "Error";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+    Sorry, an error occurred while processing your request.
+</h2>
+
+<p>Message: @Model.Message</p>
+<p>Description: @Model.Description</p>

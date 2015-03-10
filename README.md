@@ -1,11 +1,22 @@
-﻿This repository provides a complete example ASP.Net MVC-based example of how to navigate the 
+## Box OAuth2 Workflow Sample for ASP.Net 
+
+This repository provides a complete example ASP.Net MVC-based example of how to navigate the 
 [Box OAuth2 authentication flow](https://developers.box.com/docs/#oauth-2).
 You will need to [create a Box application](https://box.com/developers/services/edit/) if 
 you haven't already.
 
-**You'll need to do the following:**
+## Try It Out
 
-Part of the OAuth2 workflow involves an HTTPS redirect from Box's site to the 
+### Option A: Use the Demo Version
+
+1. Set the `redirect_uri` of your Box application to `https://box-oauth2-mvc.azurewebsites.net`
+1. Browse to [https://box-oauth2-mvc.azurewebsites.net](https://box-oauth2-mvc.azurewebsites.net), set your client ID and secret, and click **Authorize** to kick off the workflow.
+
+### Option B: Build It Yourself
+
+Open this solution in Visual Studio and press `F5` to start the site.
+
+*Nota bene*: Part of the OAuth2 workflow involves an HTTPS redirect from Box's site to the 
 one you'll be running here. The URL of *this* demo site *must* be registered 
 with Box in order for everything to work. (This pre-registration is done in 
 order to prevent rogue redirects; it's part of the OAuth2 spec.)  However, 
@@ -44,12 +55,12 @@ ID and Client Secret; you'll need those in a moment.
 
 Press F5 to get started!
 
-# About
+## About
 
 Created by John Hoerr at Indiana University for the Box community. 
 jhoerr@iu.edu / @johnhoerr
 
-# License
+## License
 
 The MIT License (MIT)
 

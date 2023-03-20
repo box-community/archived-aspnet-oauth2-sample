@@ -1,3 +1,7 @@
+<img src="images/box-dev-logo-clip.png" 
+alt= “box-dev-logo” 
+style="margin-left:-10px;"
+width=40%;>
 ## Box OAuth2 Workflow Sample for ASP.Net 
 
 This repository provides a complete example ASP.Net MVC-based example of how to navigate the 
